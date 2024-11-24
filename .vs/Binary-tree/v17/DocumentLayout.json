@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|c:\\users\\usuario\\desktop\\projects\\brindis\\binary-tree\\submenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|solutionrelative:submenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\arbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|c:\\users\\usuario\\desktop\\projects\\brindis\\binary-tree\\arbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|solutionrelative:arbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|c:\\users\\usuario\\desktop\\projects\\brindis\\binary-tree\\nodo-arbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|solutionrelative:nodo-arbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|c:\\users\\usuario\\desktop\\projects\\brindis\\binary-tree\\colas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|solutionrelative:colas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\listas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|solutionrelative:listas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|c:\\users\\usuario\\desktop\\projects\\brindis\\binary-tree\\submenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A80EE6-2D4E-4788-A5A0-3A8C39FD7FA6}|Binary-tree.csproj|solutionrelative:submenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,68 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Arbol.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Arbol.cs",
-              "RelativeDocumentMoniker": "Arbol.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Arbol.cs",
-              "RelativeToolTip": "Arbol.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAowHAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T17:52:20.046Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Submenu.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Submenu.cs",
               "RelativeDocumentMoniker": "Submenu.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Submenu.cs",
               "RelativeToolTip": "Submenu.cs",
-              "ViewState": "AgIAAOoBAAAAAAAAAAAowAMCAAApAAAAAAAAAA==",
+              "ViewState": "AgIAANoBAAAAAAAAAAArwNwBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T20:18:09.328Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-11-24T05:04:46.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Nodo-arbol.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Nodo-arbol.cs",
-              "RelativeDocumentMoniker": "Nodo-arbol.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Nodo-arbol.cs",
-              "RelativeToolTip": "Nodo-arbol.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Arbol.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Arbol.cs",
+              "RelativeDocumentMoniker": "Arbol.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Arbol.cs",
+              "RelativeToolTip": "Arbol.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAlwHcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T00:42:59.993Z",
+              "WhenOpened": "2024-11-24T05:02:05.018Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Colas.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Colas.cs",
-              "RelativeDocumentMoniker": "Colas.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Colas.cs",
-              "RelativeToolTip": "Colas.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T00:35:08.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Listas.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Listas.cs",
-              "RelativeDocumentMoniker": "Listas.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\Projects\\Brindis\\Binary-tree\\Listas.cs",
-              "RelativeToolTip": "Listas.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAgwA0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T20:05:46.885Z"
             }
           ]
         }

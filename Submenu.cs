@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Timers;
 
 namespace Binary_tree
 {
@@ -53,7 +54,7 @@ namespace Binary_tree
                             Console.Write("Ingrese el valor del nodo → ");
                             valor = Convert.ToInt32(Console.ReadLine());
                             myLista.Add(valor);
-                            Console.WriteLine($"\nEl nodo se insertó correctamente.");
+                            Console.WriteLine($"\nEl nodo: {valor}, se insertó correctamente.");
                             Console.ReadLine();
                             break;
                         case 2:
@@ -61,13 +62,13 @@ namespace Binary_tree
                             Console.WriteLine("   ╔════════════════════════╗ \n" +
                                               "   ║     IMPRIMIR TAMAÑO    ║ \n" +
                                               "   ╚════════════════════════╝ \n");
-                            Console.WriteLine($"Cantidad de nodos existentes: {myLista.Count()}");
-                            Console.ReadLine();
+                            Console.WriteLine($"Cantidad de nodos existentes: {myLista.Count()}.");
+                            Console.Read();
                             break;
                         case 3:
                             Console.Clear();
                             Console.WriteLine("   ╔═══════════════════════╗ \n" +
-                                              "   ║      Buscar Nodo      ║ \n" +
+                                              "   ║      BUSCAR NODO      ║ \n" +
                                               "   ╚═══════════════════════╝ \n");
                             Console.Write("Ingrese la posición del valor a encontrar → ");
                             pos = Convert.ToInt32(Console.ReadLine());
@@ -75,31 +76,31 @@ namespace Binary_tree
                             valor = myLista.Find(pos);
                             if (pos != -1)
                             {
-                                Console.WriteLine($"\nLa posición: {pos}, tiene el valor: {valor}");
+                                Console.WriteLine($"\nLa posición: {pos}, tiene el valor: {valor}.");
                             }
                             else
                             {
-                                Console.WriteLine("\nError inesperado. Valor inválido o fuera de rango");
+                                Console.WriteLine("\nError inesperado. Valor inválido o fuera de rango.");
                             }
-                            Console.ReadLine();
+                            Console.Read();
                             break;
                         case 4:
                             Console.Clear();
                             Console.WriteLine("   ╔════════════════════════╗ \n" +
                                               "   ║       BORRAR NODO      ║ \n" +
                                               "   ╚════════════════════════╝ \n");
-                            Console.WriteLine("Ingrese el nodo a borrar → ");
+                            Console.Write("Ingrese el nodo a borrar → ");
                             nodo = Convert.ToInt32(Console.ReadLine());
                             lastValor = myLista.Find(nodo);
                             if (myLista.Delete(nodo))
                             {
-                                Console.WriteLine($"\nEl nodo: {nodo} con el valor: {lastValor} fué eliminado.");
+                                Console.WriteLine($"\nEl nodo: {nodo}, con el valor: {lastValor}, fué eliminado.");
                             }
                             else
                             {
                                 Console.WriteLine("\nError inesperado.");
                             }
-                            Console.ReadLine();
+                            Console.Read();
                             break;
                         case 5:
                             Console.Clear();
@@ -115,32 +116,32 @@ namespace Binary_tree
 
                             if (cambio)
                             {
-                                Console.WriteLine($"\nLa posición: {pos}, tiene un nuevo valor: {nuevo}");
+                                Console.WriteLine($"\nLa posición: {pos}, tiene un nuevo valor: {nuevo}.");
                             }
                             else
                             {
-                                Console.WriteLine($"\nNo se puedo cambiar el valor de la posición: {pos}.");
-                                Console.ReadKey();
+                                Console.WriteLine($"\nNo se pudo cambiar el valor de la posición: {pos}.");
+                                Console.Read();
                             }
                             break;
                         case 6:
                             Console.Clear();
-                            Console.WriteLine("   ╔═══════════════════════╗ \n" +
-                                              "   ║      BUSCAR NODO      ║ \n" +
-                                              "   ╚═══════════════════════╝ \n");
+                            Console.WriteLine("   ╔════════════════════════╗ \n" +
+                                              "   ║      BUSCAR VALOR      ║ \n" +
+                                              "   ╚════════════════════════╝ \n");
                             Console.Write("Ingrese el valor de la posición a encontrar → ");
                             valor = Convert.ToInt32(Console.ReadLine());
                             pos = myLista.FindValue(valor);
 
                             if (pos != -1)
                             {
-                                Console.WriteLine($"\nEl valor: {valor}, tiene la posición: {pos}");
+                                Console.WriteLine($"\nEl valor: {valor}, tiene la posición: {pos}.");
                             }
                             else
                             {
                                 Console.WriteLine("\nError inesperado. El valor no existe.");
                             }
-                            Console.ReadLine();
+                            Console.Read();
                             break;
                         case 7:
                             Console.Clear();
@@ -157,14 +158,9 @@ namespace Binary_tree
                         default:
                             break;
                     }
-                }
-                else
-                {
+                }else {
                     Console.WriteLine("Opción inválida. Intente de nuevo.");
                 }
-
-                if (menu) Console.ReadKey();
-
             } while (menu);
         }
 
@@ -174,7 +170,6 @@ namespace Binary_tree
             bool menu = true;
             string input;
             int opc = 0;
-            bool state = true;
             int value;
             string entry;
             Pilas myPill = new Pilas(0);
@@ -215,11 +210,10 @@ namespace Binary_tree
                             int.TryParse(entry, out value))
                             {
                                 myPill = new Pilas(value);
-                                Console.WriteLine("Valor insertado correctamente.");
+                                Console.WriteLine("Tamaño establecido correctamente.");
                             }
                             else
                             {
-
                                 Console.WriteLine("Entrada inválida. Ingrese un número válido.");
                             }
                             Console.Read();
@@ -231,25 +225,19 @@ namespace Binary_tree
                             Console.WriteLine("   ╔════════════════╗ \n" +
                                               "   ║      PUSH      ║ \n" +
                                               "   ╚════════════════╝ \n");
-                            Console.Write("\nIngrese el valor ainsertar → ");
+                            Console.Write("\nIngrese el valor a insertar → ");
                             entry = Console.ReadLine();
-                            if (!String.IsNullOrEmpty(entry) &&
-                            int.TryParse(entry, out val))
+                            if (!String.IsNullOrEmpty(entry) && int.TryParse(entry, out val))
                             {
                                 res = myPill.Push(val);
 
                                 if (res)
                                 {
                                     Console.WriteLine($"\nLa inserción: {val}, se generó con éxito.");
-                                }
-
-                                else
-                                {
+                                } else {
                                     Console.WriteLine($"\n¡PILA LLENA!... La inserción: {val}, NO se pudo generar.");
                                 }
-                            }
-                            else
-                            {
+                            } else {
                                 Console.WriteLine("Entrada inválida. Ingrese un número válido.");
                             }
                             Console.Read();
@@ -268,7 +256,7 @@ namespace Binary_tree
                             {
                                 Console.WriteLine("LA PILA ESTÁ VACÍA.");
                             }
-                            Console.ReadLine();
+                            Console.Read();
                             break;
                         case 4:
                             Console.Clear();
@@ -284,8 +272,7 @@ namespace Binary_tree
                             {
                                 Console.WriteLine("\n!LA PILA ESTÁ VACÍA!.");
                             }
-                            Console.ReadKey();
-                            Console.ReadLine();
+                            Console.Read();
                             break;
                         case 5:
                             menu = false;
@@ -293,20 +280,14 @@ namespace Binary_tree
                         default:
                             break;
                     }
-                }
-                else
-                {
+                } else {
                     Console.WriteLine("Opción inválida. Intente de nuevo.");
                 }
-
-                if (menu) Console.ReadKey();
-
             } while (menu);
         }
         public void colas()
         {
             var myCola = new Colas(0);
-            bool state = true;
             string input;
             string entry;
             int opc = 0;
@@ -315,6 +296,7 @@ namespace Binary_tree
 
             do
             {
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("   ╔═════════════════════════╗ \n" +
                                   "   ║      MENÚ DE COLAS      ║ \n" +
@@ -363,7 +345,7 @@ namespace Binary_tree
                             bool res;
 
                             Console.WriteLine(" ╔════════════╗ \n" +
-                                              " ║   Insert   ║ \n" +
+                                              " ║   INSERT   ║ \n" +
                                               " ╚════════════╝ ");
                             Console.Write("\nIngrese el valor a insertar → ");
                             entry = Console.ReadLine();
@@ -388,11 +370,11 @@ namespace Binary_tree
                             Console.Clear();
 
                             Console.WriteLine(" ╔═══════════════╗ \n" +
-                                              " ║    Extract    ║ \n" +
+                                              " ║    EXTRACT    ║ \n" +
                                               " ╚═══════════════╝");
                             double valor = myCola.Extract();
 
-                            Console.WriteLine($"El valor extraído es: {valor}");
+                            Console.WriteLine($"\nEl valor extraído es: {valor}");
                             Console.ReadKey();
                             break;
                         case 4:
@@ -432,7 +414,7 @@ namespace Binary_tree
             string input;
             int opc = 0;
             bool res;
-            var tree = new Arbol(0);
+            var tree = new Arbol();
             
             do
             {
@@ -444,11 +426,12 @@ namespace Binary_tree
                                 "╔══════════════════════════════╗\n" +
                                 "║                              ║\n" +
                                 "║ ---------------------------- ║\n" +
-                                "║    1.- Establecer Tamaño.    ║\n" +
-                                "║    2.- Insert.               ║\n" +
-                                "║    3.- Extract.              ║\n" +
-                                "║    4.- Imprimir.             ║\n" +
-                                "║    5.- Regresar.             ║\n" +
+                                "║    1.- Insertar nodo.        ║\n" +
+                                "║    2.- Tamaño.               ║\n" +
+                                "║    3.- Altura.               ║\n" +
+                                "║    4.- LRP.                  ║\n" +
+                                "║    5.- Recorrido.            ║\n" +
+                                "║    6.- Regresar.             ║\n" +
                                 "║ ____________________________ ║\n" +
                                 "║                              ║\n" +
                                 "╚══════════════════════════════╝\n");
@@ -460,31 +443,11 @@ namespace Binary_tree
                     {
                         case 1:
                             Console.Clear();
-                            Console.WriteLine(" ╔═══════════════════════╗ \n" +
-                                              " ║   Establecer tamaño   ║ \n" +
-                                              " ╚═══════════════════════╝ ");
-                            Console.Write("\nIngrese el tamaño del árbol → ");
-                            string entry = Console.ReadLine();
-                            int tam = 0;
-                            if (!String.IsNullOrEmpty(entry) && int.TryParse(entry, out tam))
-                            {
-                                tree = new Arbol(tam); 
-                                Console.WriteLine($"\nEl árbol tiene un tamaño máximo de {tam} nodos.");
-                            }
-                            else
-                            {
-                                Console.WriteLine("\nValor no válido. Por favor ingrese un número.");
-                            }
-
-                            Console.ReadKey();
-                            break;
-                        case 2:
-                            Console.Clear();
                             double val = 0;
                             bool answer;
-                            Console.WriteLine(" ╔════════════╗ \n" +
-                                              " ║   Insert   ║ \n" +
-                                              " ╚════════════╝ ");
+                            Console.WriteLine(" ╔═══════════════════╗ \n" +
+                                              " ║   INSERTAR NODO   ║ \n" +
+                                              " ╚═══════════════════╝");
                             Console.Write("\nIngrese el valor a insertar → ");
                             string insertar = Console.ReadLine();
                             if (!String.IsNullOrEmpty(insertar) && double.TryParse(insertar, out val))
@@ -501,22 +464,40 @@ namespace Binary_tree
                             }
                             Console.ReadKey();
                             break;
+                        case 2:
+                            Console.Clear();
+                            Console.WriteLine(" ╔══════════════╗ \n" +
+                                              " ║    TAMAÑO    ║ \n" +
+                                              " ╚══════════════╝");
+                            Console.WriteLine($"\nEl tamaño del árbol es: {tree.GetTam()}");
+                            
+                            Console.ReadKey();
+                            break;
                         case 3:
                             Console.Clear();
-                            Console.WriteLine(" ╔═══════════════╗ \n" +
-                                              " ║    Extract    ║ \n" +
-                                              " ╚═══════════════╝");
-                            Console.ReadLine();
+                            Console.WriteLine(" ╔══════════════╗ \n" +
+                                              " ║    ALTURA    ║ \n" +
+                                              " ╚══════════════╝");
+                            tree.PrintHeight();
+                            Console.Read();
                             break;
                         case 4:
                             Console.Clear();
-                            Console.WriteLine(" ╔════════════════════╗ \n" +
-                                              " ║   IMPRIMIR ÁRBOL   ║ \n" +
-                                              " ╚════════════════════╝");
-                            tree.Print();
+                            Console.WriteLine(" ╔═════════════════╗ \n" +
+                                              " ║       LRP       ║ \n" +
+                                              " ╚═════════════════╝");
+                            
                             Console.ReadLine();
                             break;
                         case 5:
+                            Console.Clear();
+                            Console.WriteLine(" ╔═════════════════╗ \n" +
+                                              " ║    RECORRIDO    ║ \n" +
+                                              " ╚═════════════════╝");
+                            tree.Print();
+                            Console.ReadKey();
+                            break;
+                        case 6:
                             menu = false;
                             break;
                         default:

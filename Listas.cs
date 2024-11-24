@@ -167,11 +167,10 @@ namespace Binary_tree
             return -1;
         }
 
-
         public void DrawScreen(Listas lista)
         {
             string line = "";
-            string value = "";
+            string valu = "";
 
             int draw = lista.Count();
             if (draw == 0)
@@ -190,26 +189,26 @@ namespace Binary_tree
                 return;
             }
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < draw; i++)
             {
                 for (int j = 0; j < draw; j++)
                 {
-                    value = lista.Find(j).ToString();
-                    line = line.PadRight(value.Length);
+                    valu = lista.Find(j).ToString();
+                    line = line.PadRight(valu.Length);
                     line.Replace(" ", "-");
 
                     string[] printEnd = new string[]
                     {
-                        $"┌{line}---┬┐     ",
-                        $"|{value}  ||--┐  ",
-                        $"└{line}---┴┘ -┴- "
+                        $"┌{line}┬┐     ",
+                        $"|{valu}||--┐  ",
+                        $"└{line}┴┘ -┴- "
                     };
 
                     string[] dcontinue = new string[]
                     {
-                        $"┌{line}-┬┐       ",
-                        $"|{value}||==>   ",
-                        $"└{line}-┴┘       "
+                        $"┌{line}┬┐   ",
+                        $"|{valu}||==>",
+                        $"└{line}┴┘   "
                     };
 
                     if (draw - 1 == j)

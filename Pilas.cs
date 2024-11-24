@@ -52,8 +52,9 @@ namespace Binary_tree
             //Imprime la Pila.
             if (Empty())
             {
-                Console.WriteLine("\nPILA VACÍA.");
+                Console.WriteLine("\nLA PILA ESTÁ VACÍA...");
             }
+            
             double[] val = new double[tope];
             NodoNormy actual = inicio;
             for (int i = 0; i < tope; i++)
@@ -129,9 +130,7 @@ namespace Binary_tree
                     }
                     else
                     {
-
                         act = act.Sig;
-
                     }
                 }
             }

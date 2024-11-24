@@ -72,14 +72,14 @@ namespace Binary_tree
         public double Extract()
         {
             // Regresa el valor extraido de la cola, si la cola esta vacia regresa -1.
-        if (this.UnderFlow())
+            if (this.UnderFlow())
             {
                 return -1;
             }
-            double extraer = Inicio.Valor;
-            Inicio = Inicio.Sig;
-            Countt--;
-            return extraer;
+                double extraer = Inicio.Valor;
+                Inicio = Inicio.Sig;
+                Countt--;
+                return extraer;
         }
     }
 }

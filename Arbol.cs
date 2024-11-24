@@ -5,24 +5,18 @@ namespace Binary_tree
 {
     public class Arbol
     {
-        private int tam;
         private int tamAct;
 
         public Nodo Raiz { get; set; }
         private Nodo Obs { get; set; }
 
-        public Arbol(int tamMax)
+        public Arbol()
         {
-            this.tam = tamMax;
             this.tamAct = 0;
         }
 
         public bool Insert(double v)
         {
-            if (this.tamAct >= tam) {
-                Console.WriteLine("\n¡ÁRBOL LLENO!... No se puede insertar más nodos.");
-                return false;
-            }
             Nodo nuevo, psave;
             bool found = false;
             psave = Obs;
@@ -95,15 +89,21 @@ namespace Binary_tree
                 }
             }
             return found;
-        }  
+        }
 
+        public int GetTam()
+        {
+            return tamAct;
+        }
         private void PrintTree(Nodo nodo)
         {
             if(nodo != null)
             {
+                Console.Write($"{nodo.Valor} ");
                 PrintTree(nodo.Izq);
-                Console.WriteLine(nodo.Valor);
+                Console.Write($"{nodo.Valor} ");
                 PrintTree(nodo.Der);
+                Console.Write($"{nodo.Valor} ");
             }
         }
 
@@ -111,6 +111,25 @@ namespace Binary_tree
         {
             Console.WriteLine("Imprimiendo árbol:");
             PrintTree(Raiz);
+        }
+
+        public int Height(Nodo nodo)
+        {
+           
+            if (nodo == null)
+            {
+                return -1;
+            }
+            int heightIzq= Height(nodo.Izq);
+            int heightDer = Height(nodo.Der);
+
+            
+            return Math.Max(heightIzq, heightDer) + 1;
+        }
+        public void PrintHeight()
+        {
+            int altura = Height(Raiz);
+            Console.WriteLine($"\nLa altura del árbol es: {altura}");
         }
     }
 }
