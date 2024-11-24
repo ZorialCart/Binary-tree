@@ -1,0 +1,7 @@
+C:\Users\Usuario\Desktop\Projects\Brindis\Binary-tree\bin\Debug\Binary-tree.exe.config
+C:\Users\Usuario\Desktop\Projects\Brindis\Binary-tree\bin\Debug\Binary-tree.exe
+C:\Users\Usuario\Desktop\Projects\Brindis\Binary-tree\bin\Debug\Binary-tree.pdb
+C:\Users\Usuario\Desktop\Projects\Brindis\Binary-tree\obj\Debug\Binary-tree.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Projects\Brindis\Binary-tree\obj\Debug\Binary-tree.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Projects\Brindis\Binary-tree\obj\Debug\Binary-tree.exe
+C:\Users\Usuario\Desktop\Projects\Brindis\Binary-tree\obj\Debug\Binary-tree.pdb
