@@ -13,7 +13,7 @@ namespace Binary_tree
             int nodo = 0;
             int lastValor;
             int nuevo = 0;
-            bool cambio;
+            bool cambio = true;
 
             Listas myLista = new Listas();
             do
@@ -113,7 +113,7 @@ namespace Binary_tree
 
                             myLista.Change(pos, nuevo);
 
-                            if (cambio = true)
+                            if (cambio)
                             {
                                 Console.WriteLine($"\nLa posición: {pos}, tiene un nuevo valor: {nuevo}");
                             }
@@ -432,6 +432,8 @@ namespace Binary_tree
             string input;
             int opc = 0;
             bool res;
+            var tree = new Arbol(0);
+            
             do
             {
                 Console.Clear();
@@ -462,17 +464,41 @@ namespace Binary_tree
                                               " ║   Establecer tamaño   ║ \n" +
                                               " ╚═══════════════════════╝ ");
                             Console.Write("\nIngrese el tamaño del árbol → ");
-                         
+                            string entry = Console.ReadLine();
+                            int tam = 0;
+                            if (!String.IsNullOrEmpty(entry) && int.TryParse(entry, out tam))
+                            {
+                                tree = new Arbol(tam); 
+                                Console.WriteLine($"\nEl árbol tiene un tamaño máximo de {tam} nodos.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nValor no válido. Por favor ingrese un número.");
+                            }
+
                             Console.ReadKey();
                             break;
                         case 2:
                             Console.Clear();
                             double val = 0;
+                            bool answer;
                             Console.WriteLine(" ╔════════════╗ \n" +
                                               " ║   Insert   ║ \n" +
                                               " ╚════════════╝ ");
                             Console.Write("\nIngrese el valor a insertar → ");
-                           
+                            string insertar = Console.ReadLine();
+                            if (!String.IsNullOrEmpty(insertar) && double.TryParse(insertar, out val))
+                            {
+                                answer = tree.Insert(val);
+                                if (answer)
+                                {
+                                    Console.WriteLine($"\nLa inserción: {val}, se generó con éxito.");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nValor no válido. Por favor ingrese un número.");
+                            }
                             Console.ReadKey();
                             break;
                         case 3:
@@ -487,6 +513,7 @@ namespace Binary_tree
                             Console.WriteLine(" ╔════════════════════╗ \n" +
                                               " ║   IMPRIMIR ÁRBOL   ║ \n" +
                                               " ╚════════════════════╝");
+                            tree.Print();
                             Console.ReadLine();
                             break;
                         case 5:

@@ -1,22 +1,37 @@
 ﻿using System;
+using System.Runtime.Remoting.Messaging;
 
 namespace Binary_tree
 {
     public class Arbol
     {
+        private int tam;
+        private int tamAct;
+
         public Nodo Raiz { get; set; }
         private Nodo Obs { get; set; }
 
-        public bool Insert(int v)
+        public Arbol(int tamMax)
         {
+            this.tam = tamMax;
+            this.tamAct = 0;
+        }
+
+        public bool Insert(double v)
+        {
+            if (this.tamAct >= tam) {
+                Console.WriteLine("\n¡ÁRBOL LLENO!... No se puede insertar más nodos.");
+                return false;
+            }
             Nodo nuevo, psave;
-            bool Found;
+            bool found = false;
             psave = Obs;
-            Found = FindKey(v);
-            if (Found)
+            found = FindKey(v);
+            if (found)
             {
                 Console.WriteLine("El nodo ya existe.");
                 Obs = psave;
+                return false;
             }
             else
             {
@@ -29,30 +44,27 @@ namespace Binary_tree
                 else
                 {
                     if (v < Obs.Valor)
-                    {
                         Obs.Izq = nuevo;
-                    }
                     else
-                    {
                         Obs.Der = nuevo;
-                        Obs = nuevo;
-                    }
+                    Obs = nuevo;
                 }
-                return false;
+                tamAct++;
             }
-            return false ;
+            return true;
         }
-        private bool FindKey(int v)
+
+        private bool FindKey(double v)
         {
-            bool Found = false;
-            Nodo q;
-            q = Raiz;
-            while (!Found && q != null)
+            bool found = false;
+            Nodo q = Raiz;
+
+            while (!found && q != null)
             {
                 if (v == q.Valor)
                 {
                     Obs = q;
-                    Found = true;
+                    found = true;
                 }
                 else
                 {
@@ -65,15 +77,40 @@ namespace Binary_tree
                         }
                         else
                         {
-                            if (q.Der == null)
-                                Obs = q;
+                            q = q.Izq;
+                        }
+                    }
+                    else
+                    {
+                        if (q.Der == null)
+                        {
+                            Obs = q;
+                            q = q.Der;
+                        }
+                        else
+                        {
                             q = q.Der;
                         }
                     }
                 }
-                return Found;
             }
-            return false;
+            return found;
+        }  
+
+        private void PrintTree(Nodo nodo)
+        {
+            if(nodo != null)
+            {
+                PrintTree(nodo.Izq);
+                Console.WriteLine(nodo.Valor);
+                PrintTree(nodo.Der);
+            }
+        }
+
+        public void Print()
+        {
+            Console.WriteLine("Imprimiendo árbol:");
+            PrintTree(Raiz);
         }
     }
 }
