@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Remoting.Messaging;
 
 namespace Binary_tree
@@ -9,6 +10,8 @@ namespace Binary_tree
 
         public Nodo Raiz { get; set; }
         private Nodo Obs { get; set; }
+
+        List<double> numeros = new List<double> { };
 
         public Arbol()
         {
@@ -44,6 +47,7 @@ namespace Binary_tree
                     Obs = nuevo;
                 }
                 tamAct++;
+                numeros.Add(v);
             }
             return true;
         }
@@ -114,8 +118,7 @@ namespace Binary_tree
         }
 
         public int Height(Nodo nodo)
-        {
-           
+        {     
             if (nodo == null)
             {
                 return -1;
@@ -123,14 +126,78 @@ namespace Binary_tree
             int heightIzq= Height(nodo.Izq);
             int heightDer = Height(nodo.Der);
 
-            
             return Math.Max(heightIzq, heightDer) + 1;
         }
         public void PrintHeight()
         {
-            int altura = Height(Raiz);
+            int altura = Height(Raiz) + 1;
             Console.WriteLine($"\nLa altura del árbol es: {altura}");
         }
+
+        private int PalLRP(double v)
+        {
+            bool found = false;
+            int c = 0;
+            Nodo q = Raiz;
+
+            while (!found && q != null)
+            {
+                if (v == q.Valor)
+                {
+                    Obs = q;
+                    found = true;
+                }
+                else
+                {
+                    c = c + 1;
+                    if (v < q.Valor)
+                    {
+                        if (q.Izq == null)
+                        {
+                            Obs = q;
+                            q = q.Izq;
+                        }
+                        else
+                        {
+                            q = q.Izq;
+                        }
+                    }
+                    else
+                    {
+                        if (q.Der == null)
+                        {
+                            Obs = q;
+                            q = q.Der;
+                        }
+                        else
+                        {
+                            q = q.Der;
+                        }
+                    }
+                }
+            }
+            return c;
+        }
+
+        public void LRP(Nodo nodo)
+        {
+            double g = 0;
+            for (int i=0; i < tamAct; i++)
+            {
+                int a = PalLRP(numeros[i]);
+
+
+                g = g + a + 1;
+            }
+
+            g = g / tamAct;
+            Console.WriteLine("El LRP del arbol binario es de:");
+            Console.WriteLine(g);
+        }
+
+
+
+
     }
 }
 

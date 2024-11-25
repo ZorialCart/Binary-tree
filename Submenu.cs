@@ -415,7 +415,13 @@ namespace Binary_tree
             int opc = 0;
             bool res;
             var tree = new Arbol();
-            
+            tree.Insert(15);
+            tree.Insert(8);
+            tree.Insert(23);
+            tree.Insert(5);
+            tree.Insert(12);
+            tree.Insert(17);
+            tree.Insert(25);
             do
             {
                 Console.Clear();
@@ -486,7 +492,8 @@ namespace Binary_tree
                             Console.WriteLine(" ╔═════════════════╗ \n" +
                                               " ║       LRP       ║ \n" +
                                               " ╚═════════════════╝");
-                            
+                            tree.LRP(tree.Raiz);
+
                             Console.ReadLine();
                             break;
                         case 5:
