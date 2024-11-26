@@ -12,3 +12,10 @@ C:\Users\pc\Source\Repos\Binary-tree\obj\Debug\Binary-tree.csproj.AssemblyRefere
 C:\Users\pc\Source\Repos\Binary-tree\obj\Debug\Binary-tree.csproj.CoreCompileInputs.cache
 C:\Users\pc\Source\Repos\Binary-tree\obj\Debug\Binary-tree.exe
 C:\Users\pc\Source\Repos\Binary-tree\obj\Debug\Binary-tree.pdb
+D:\Binary-tree\bin\Debug\Binary-tree.exe.config
+D:\Binary-tree\bin\Debug\Binary-tree.exe
+D:\Binary-tree\bin\Debug\Binary-tree.pdb
+D:\Binary-tree\obj\Debug\Binary-tree.csproj.AssemblyReference.cache
+D:\Binary-tree\obj\Debug\Binary-tree.csproj.CoreCompileInputs.cache
+D:\Binary-tree\obj\Debug\Binary-tree.exe
+D:\Binary-tree\obj\Debug\Binary-tree.pdb

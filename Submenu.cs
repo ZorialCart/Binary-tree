@@ -413,15 +413,8 @@ namespace Binary_tree
             bool menu = true;
             string input;
             int opc = 0;
-            bool res;
             var tree = new Arbol();
-            tree.Insert(15);
-            tree.Insert(8);
-            tree.Insert(23);
-            tree.Insert(5);
-            tree.Insert(12);
-            tree.Insert(17);
-            tree.Insert(25);
+       
             do
             {
                 Console.Clear();
@@ -443,7 +436,7 @@ namespace Binary_tree
                                 "╚══════════════════════════════╝\n");
                 Console.Write("Seleccionar Opción → ");
                 input = Console.ReadLine();
-                if (int.TryParse(input, out opc) && opc >= 1 && opc <= 5)
+                if (int.TryParse(input, out opc) && opc >= 1 && opc <= 6)
                 {
                     switch (opc)
                     {
