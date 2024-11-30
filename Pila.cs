@@ -2,7 +2,7 @@
 
 namespace Binary_tree
 {
-    public class Pilas
+    public class Pila
     {
         private int max;
         private int tope = 0;
@@ -18,7 +18,7 @@ namespace Binary_tree
         {
             get => valor; set => valor = value;
         }
-        public Pilas(int max)
+        public Pila(int max)
         {
             Max = max;
             inicio = null;

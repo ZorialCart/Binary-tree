@@ -16,7 +16,7 @@ namespace Binary_tree
             int nuevo = 0;
             bool cambio = true;
 
-            Listas myLista = new Listas();
+            Lista myLista = new Lista();
             do
             {
                 Console.Clear();
@@ -172,7 +172,7 @@ namespace Binary_tree
             int opc = 0;
             int value;
             string entry;
-            Pilas myPill = new Pilas(0);
+            Pila myPill = new Pila(0);
             do
             {
                 Console.Clear();
@@ -209,7 +209,7 @@ namespace Binary_tree
 
                             int.TryParse(entry, out value))
                             {
-                                myPill = new Pilas(value);
+                                myPill = new Pila(value);
                                 Console.WriteLine("Tamaño establecido correctamente.");
                             }
                             else
@@ -287,7 +287,7 @@ namespace Binary_tree
         }
         public void colas()
         {
-            var myCola = new Colas(0);
+            var myCola = new Cola(0);
             string input;
             string entry;
             int opc = 0;
@@ -329,14 +329,14 @@ namespace Binary_tree
 
                             if (!String.IsNullOrEmpty(entry) && int.TryParse(entry, out value))
                             {
-                                myCola = new Colas(value);
+                                myCola = new Cola(value);
                                 Console.WriteLine($"\nEl tamaño de la cola es de: {value}.");
                             }
                             else
                             {
                                 Console.WriteLine("Entrada inválida. Ingrese un número válido.");
                             }
-                            Console.ReadKey();
+                            Console.Read();
 
                             break;
                         case 2:
@@ -363,7 +363,7 @@ namespace Binary_tree
 
                                 Console.WriteLine("Entrada inválida. Ingrese un número válido.");
                             }
-                            Console.ReadKey();
+                            Console.Read();
 
                             break;
                         case 3:
@@ -375,7 +375,7 @@ namespace Binary_tree
                             double valor = myCola.Extract();
 
                             Console.WriteLine($"\nEl valor extraído es: {valor}");
-                            Console.ReadKey();
+                            Console.Read();
                             break;
                         case 4:
                             Console.Clear();
@@ -388,7 +388,7 @@ namespace Binary_tree
                             }
                             
                             myCola.Print();
-                            Console.ReadKey();
+                            Console.Read();
                             break;
                         case 5:
                             menu = false;
@@ -402,7 +402,7 @@ namespace Binary_tree
                     Console.WriteLine("Opción inválida. Intente de nuevo.");
                 }
 
-                if (menu) Console.ReadKey();
+                //if (menu) Console.Read();
 
             } while (menu);
         }
@@ -509,7 +509,7 @@ namespace Binary_tree
                     Console.WriteLine("Opción inválida. Intente de nuevo.");
                 }
 
-                if (menu) Console.ReadKey();
+                //if (menu) Console.ReadKey();
 
             } while (menu);
         }

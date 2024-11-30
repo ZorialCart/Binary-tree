@@ -2,11 +2,11 @@
 
 namespace Binary_tree
 {
-    public class Listas
+    public class Lista
     {
         NodoNormy inicio;
 
-        public Listas()
+        public Lista()
         {
             inicio = null;
         }
@@ -101,7 +101,7 @@ namespace Binary_tree
         public bool Change(int pos, int num)
         {
             
-        if (inicio == null || pos < 0)
+            if (inicio == null || pos < 0)
             {
                 return false;
             }
@@ -167,7 +167,7 @@ namespace Binary_tree
             return -1;
         }
 
-        public void DrawScreen(Listas lista)
+        public void DrawScreen(Lista lista)
         {
             string line = "";
             string valu = "";
@@ -189,13 +189,13 @@ namespace Binary_tree
                 return;
             }
 
-            for (int i = 0; i < draw; i++)
+            for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < draw; j++)
                 {
                     valu = lista.Find(j).ToString();
                     line = line.PadRight(valu.Length);
-                    line.Replace(" ", "-");
+                    line = line.Replace(" ", "-");
 
                     string[] printEnd = new string[]
                     {

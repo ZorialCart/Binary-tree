@@ -2,7 +2,7 @@
 
 namespace Binary_tree
 {
-    public class Colas
+    public class Cola
     {
         private NodoNormy inicio;
         private int count = 0;
@@ -12,7 +12,7 @@ namespace Binary_tree
         public int Countt { get => count; set => count = value; }
         public double Max { get => max; set => max = value; }
         public double Valor { get => valor; set => valor = value; }
-        public Colas(int max)
+        public Cola(int max)
         {
             Max = max;
             Inicio = null;

@@ -191,6 +191,13 @@ namespace Binary_tree
             }
 
             g = g / tamAct;
+
+            if(double.IsNaN(g))
+            {
+                Console.WriteLine("El arbol esta vacio");
+                return;
+            }
+
             Console.WriteLine("El LRP del arbol binario es de:");
             Console.WriteLine(g);
         }
